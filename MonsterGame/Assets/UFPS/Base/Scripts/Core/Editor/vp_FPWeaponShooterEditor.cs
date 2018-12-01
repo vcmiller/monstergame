@@ -11,6 +11,7 @@
 
 using UnityEngine;
 using UnityEditor;
+using SBR;
 
 [CustomEditor(typeof(vp_FPWeaponShooter))]
 
@@ -137,7 +138,7 @@ public class vp_FPWeaponShooterEditor : Editor
 			GUI.enabled = false;
 			GUILayout.Label("TIP: Set Firing Rate to zero if you want to use the length of the\nFire animation as Firing Rate (this will disable Tap Firing).", vp_EditorGUIUtility.NoteStyle);
 			GUI.enabled = true;
-			m_Component.ProjectilePrefab = (GameObject)EditorGUILayout.ObjectField("Prefab", m_Component.ProjectilePrefab, typeof(GameObject), false);
+			m_Component.ProjectilePrefab = (Projectile)EditorGUILayout.ObjectField("Prefab", m_Component.ProjectilePrefab, typeof(Projectile), false);
 			GUI.enabled = false;
 			GUILayout.Label("Prefab should be a gameobject with a projectile\nlogic script added to it (such as vp_HitscanBullet).", vp_EditorGUIUtility.NoteStyle);
 			GUI.enabled = true;

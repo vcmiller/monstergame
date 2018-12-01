@@ -145,32 +145,7 @@ public class vp_FPWeaponMeleeAttack : vp_Component
 			return m_FPController;
 		}
 	}
-
-	[System.Obsolete("Please use the 'Bullet' parameter instead.")]
-	public vp_Bullet HitscanBullet
-	{
-		get
-		{
-			return Bullet;
-		}
-	}
-		
-	protected vp_Bullet m_Bullet = null;
-	public vp_Bullet Bullet
-	{
-		get
-		{
-			if (m_Bullet == null && (WeaponShooter != null) && (WeaponShooter.ProjectilePrefab != null))
-			{
-				m_Bullet = WeaponShooter.ProjectilePrefab.GetComponent<vp_Bullet>();
-				if (m_Bullet == null)
-					Debug.LogWarning("Warning (" + this + ") ProjectilePrefab of the WeaponShooter has no vp_Bullet-derived component (this melee weapon won't be able to do damage).");
-			}
-			return m_Bullet;
-		}
-	}
-
-
+    
 	/// <summary>
 	/// 
 	/// </summary>
@@ -291,33 +266,7 @@ public class vp_FPWeaponMeleeAttack : vp_Component
 				RaycastHit hit;
 				Ray ray = new Ray(new Vector3(FPController.Transform.position.x, FPCamera.Transform.position.y,
 												FPController.Transform.position.z), FPCamera.Transform.forward);
-
-				Physics.Raycast(ray, out hit, (Bullet != null ? Bullet.Range : 2), vp_Layer.Mask.BulletBlockers);
-
-				// hit something: perform impact functionality
-				if (hit.collider != null)
-				{
-
-					if (WeaponShooter != null)
-					{
-						WeaponShooter.FirePosition = Camera.main.transform.position;
-						WeaponShooter.TryFire();
-					}
-					ApplyRecoil();
-
-				}
-				else
-				{
-
-					// didn't hit anything: carry on swinging until time is up
-					vp_Timer.In(SwingDuration - ImpactTime, delegate()
-					{
-						FPWeapon.StopSprings();
-						Reset();
-					}, SwingDurationTimer);
-
-				}
-
+                
 			}, ImpactTimer);
 
 		}, SwingDelayTimer);

@@ -15,6 +15,7 @@
 
 using UnityEngine;
 using System.Collections.Generic;
+using SBR;
 
 [RequireComponent(typeof(AudioSource))]
 
@@ -36,7 +37,7 @@ public class vp_Shooter : vp_Component
 	protected GameObject m_ProjectileDefaultSpawnpoint = null;
 
 	// projectile
-	public GameObject ProjectilePrefab = null;			// prefab with a mesh and projectile script
+	public Projectile ProjectilePrefab = null;			// prefab with a mesh and projectile script
 	public float ProjectileScale = 1.0f;				// scale of the projectile decal
 	public float ProjectileFiringRate = 0.3f;			// delay between shots fired when fire button is held down
 	public float ProjectileSpawnDelay = 0.0f;			// delay between fire button pressed and projectile launched
@@ -319,15 +320,14 @@ public class vp_Shooter : vp_Component
 		for (int v = 0; v < ProjectileCount; v++)
 		{
 		
-			GameObject p = null;
+			Projectile p = null;
 
-			p = (GameObject)vp_Utility.Instantiate(ProjectilePrefab, m_CurrentFirePosition, m_CurrentFireRotation);
+			p = Instantiate(ProjectilePrefab, m_CurrentFirePosition, m_CurrentFireRotation);
 
-			// TIP: uncomment this to debug-draw bullet paths and points of impact
-			//DrawProjectileDebugInfo(v);
+            // TIP: uncomment this to debug-draw bullet paths and points of impact
+            //DrawProjectileDebugInfo(v);
 
-			p.SendMessage("SetSource", (ProjectileSourceIsRoot ? Root : Transform), SendMessageOptions.DontRequireReceiver);
-			p.transform.localScale = new Vector3(ProjectileScale, ProjectileScale, ProjectileScale);	// preset defined scale
+            p.Fire();
 
 			SetSpread(m_CurrentFireSeed * (v + 1), p.transform);
 

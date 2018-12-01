@@ -11,6 +11,7 @@
 
 using UnityEngine;
 using UnityEditor;
+using SBR;
 
 [CustomEditor(typeof(vp_WeaponShooter))]
 
@@ -145,7 +146,7 @@ public class vp_WeaponShooterEditor : Editor
 			}
 			m_Component.ProjectileTapFiringRate = Mathf.Min(Mathf.Max(0.0f, EditorGUILayout.FloatField("Tap Firing Rate", m_Component.ProjectileTapFiringRate)), m_Component.ProjectileFiringRate);
 			GUI.enabled = true;
-			m_Component.ProjectilePrefab = (GameObject)EditorGUILayout.ObjectField("Prefab", m_Component.ProjectilePrefab, typeof(GameObject), false);
+			m_Component.ProjectilePrefab = (Projectile)EditorGUILayout.ObjectField("Prefab", m_Component.ProjectilePrefab, typeof(Projectile), false);
 			m_Component.ProjectileScale = EditorGUILayout.Slider("Scale", m_Component.ProjectileScale, 0, 2);
 			m_Component.ProjectileCount = EditorGUILayout.IntField("Count", m_Component.ProjectileCount);
 			m_Component.ProjectileSpread = EditorGUILayout.Slider("Spread", m_Component.ProjectileSpread, 0, 360);

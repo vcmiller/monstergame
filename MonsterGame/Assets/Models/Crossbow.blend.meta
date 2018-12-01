@@ -4,14 +4,31 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: arm_l
+    100004: arm_r
+    100006: Armature
+    100008: Crossbow
+    100010: handle
+    100012: root
+    100014: bolt
     400000: //RootNode
+    400002: arm_l
+    400004: arm_r
+    400006: Armature
+    400008: Crossbow
+    400010: handle
+    400012: root
+    400014: bolt
     2100000: Material
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
     4300002: Crossbow
     7400000: Default Take
+    7400002: CrossbowFire
     9500000: //RootNode
+    11100000: //RootNode
+    13700000: Crossbow
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -39,7 +56,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: CrossbowFire
+      takeName: CrossbowFire
+      firstFrame: -1
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -86,10 +131,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

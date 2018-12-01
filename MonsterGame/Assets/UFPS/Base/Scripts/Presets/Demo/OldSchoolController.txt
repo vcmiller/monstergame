@@ -5,7 +5,7 @@
 ComponentType vp_FPController
 MotorAcceleration 0.4
 MotorDamping 0.1
-MotorJumpForce 0.11
+MotorJumpForce 0.3
 MotorJumpForceDamping 0.08
 MotorJumpForceHold 0.0
 MotorJumpForceHoldDamping 0.5

@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2fdc76cd1b64240a076010acb4665a, type: 3}
+  m_Name: CharacterChannels
+  m_EditorClassIdentifier: 
+  baseClass: SBR.Channels
+  channels:
+  - name: movement
+    type: 3
+    clears: 1
+    floatHasRange: 0
+    floatMin: 0
+    floatMax: 0
+    defaultFloat: 0
+    intHasRange: 0
+    intMin: 0
+    intMax: 0
+    defaultInt: 0
+    defaultBool: 0
+    vectorHasMax: 1
+    vectorMax: 1
+    defaultVector: {x: 0, y: 0, z: 0}
+    defaultRotation: {x: 0, y: 0, z: 0}
+    objectType: 
+  - name: rotation
+    type: 4
+    clears: 0
+    floatHasRange: 0
+    floatMin: 0
+    floatMax: 0
+    defaultFloat: 0
+    intHasRange: 0
+    intMin: 0
+    intMax: 0
+    defaultInt: 0
+    defaultBool: 0
+    vectorHasMax: 0
+    vectorMax: 0
+    defaultVector: {x: 0, y: 0, z: 0}
+    defaultRotation: {x: 0, y: 0, z: 0}
+    objectType: 
+  - name: jump
+    type: 2
+    clears: 0
+    floatHasRange: 0
+    floatMin: 0
+    floatMax: 0
+    defaultFloat: 0
+    intHasRange: 0
+    intMin: 0
+    intMax: 0
+    defaultInt: 0
+    defaultBool: 0
+    vectorHasMax: 0
+    vectorMax: 0
+    defaultVector: {x: 0, y: 0, z: 0}
+    defaultRotation: {x: 0, y: 0, z: 0}
+    objectType: 
