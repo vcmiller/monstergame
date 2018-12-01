@@ -268,7 +268,10 @@ public class vp_Shooter : vp_Component
 		// means of triggering your own method in a script on the root gameobject
 		// when the shooter fires
 		if(HaveFireMessage)
-			gameObject.transform.root.gameObject.SendMessage(FireMessage, SendMessageOptions.DontRequireReceiver);
+        {
+            GetComponent<vp_FPWeapon>().WeaponModel.gameObject.SendMessage(FireMessage, SendMessageOptions.DontRequireReceiver);
+            gameObject.transform.root.gameObject.SendMessage(FireMessage, SendMessageOptions.DontRequireReceiver);
+        }
 
 	}
 
