@@ -4,13 +4,111 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: arm_l
+    100004: Armature
+    100006: Cube
+    100008: forearm_l
+    100010: head
+    100012: jaw
+    100014: neck
+    100016: root
+    100018: root_006
+    100020: root_007
+    100022: root_008
+    100024: root_009
+    100026: root_010
+    100028: root_015
+    100030: root_016
+    100032: root_017
+    100034: root_018
+    100036: shoulder_l
+    100038: torso1
+    100040: torso2
+    100042: finger1_l_
+    100044: finger2_l
+    100046: finger3_l
+    100048: thumb1_l
+    100050: thumb2_l
+    100052: wrist_l
+    100054: arm_r
+    100056: calf_l
+    100058: calf_r
+    100060: fingers_l
+    100062: fingers_r
+    100064: foot_ik_l
+    100066: foot_ik_r
+    100068: foot_l
+    100070: foot_r
+    100072: forearm_r
+    100074: knee_poulle_l
+    100076: knee_poulle_r
+    100078: leg_l
+    100080: leg_r
+    100082: shoulder_r
+    100084: thumb_l
+    100086: thumb_r
+    100088: toes_l
+    100090: toes_r
+    100092: Werewolf
+    100094: wrist_r
     400000: //RootNode
+    400002: arm_l
+    400004: Armature
+    400006: Cube
+    400008: forearm_l
+    400010: head
+    400012: jaw
+    400014: neck
+    400016: root
+    400018: root_006
+    400020: root_007
+    400022: root_008
+    400024: root_009
+    400026: root_010
+    400028: root_015
+    400030: root_016
+    400032: root_017
+    400034: root_018
+    400036: shoulder_l
+    400038: torso1
+    400040: torso2
+    400042: finger1_l_
+    400044: finger2_l
+    400046: finger3_l
+    400048: thumb1_l
+    400050: thumb2_l
+    400052: wrist_l
+    400054: arm_r
+    400056: calf_l
+    400058: calf_r
+    400060: fingers_l
+    400062: fingers_r
+    400064: foot_ik_l
+    400066: foot_ik_r
+    400068: foot_l
+    400070: foot_r
+    400072: forearm_r
+    400074: knee_poulle_l
+    400076: knee_poulle_r
+    400078: leg_l
+    400080: leg_r
+    400082: shoulder_r
+    400084: thumb_l
+    400086: thumb_r
+    400088: toes_l
+    400090: toes_r
+    400092: Werewolf
+    400094: wrist_r
     2100000: Material
     2300000: //RootNode
+    2300002: Cube
     3300000: //RootNode
+    3300002: Cube
     4300000: Cube
+    4300002: Werewolf
     7400000: Default Take
     9500000: //RootNode
+    13700000: Werewolf
   externalObjects: {}
   materials:
     importMaterials: 1

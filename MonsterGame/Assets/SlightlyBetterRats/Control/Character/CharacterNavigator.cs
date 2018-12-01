@@ -5,13 +5,12 @@ using UnityEngine.AI;
 
 namespace SBR {
     [RequireComponent(typeof(NavMeshAgent))]
-    public abstract class CharacterNavigator : StateMachine {
+    public abstract class CharacterNavigator : StateMachine<CharacterChannels> {
         public Queue<Vector3> waypoints { get; private set; }
         public NavMeshPath currentPath { get; private set; }
         public NavMeshAgent agent { get; private set; }
 
         public float acceptance = 1;
-        private CharacterChannels character;
         
         public bool arrived {
             get {
@@ -27,16 +26,10 @@ namespace SBR {
             waypoints = new Queue<Vector3>();
         }
 
-        protected virtual void OnEnable() {
-
-            character = channels as CharacterChannels;
-
+        public override void Initialize()
+        {
+            base.Initialize();
             agent = GetComponent<NavMeshAgent>();
-            
-            if (!agent) {
-                Debug.LogError("Character navigator requires NavMeshAgent component.");
-            }
-
             agent.updatePosition = agent.updateRotation = agent.updateUpAxis = false;
         }
 
@@ -54,10 +47,10 @@ namespace SBR {
             }
 
             if (agent.hasPath) {
-                character.movement = agent.desiredVelocity;
+                channels.movement = agent.desiredVelocity;
                 
                 if (agent.isOnOffMeshLink && agent.currentOffMeshLinkData.linkType == OffMeshLinkType.LinkTypeJumpAcross) {
-                    character.jump = true;
+                    channels.jump = true;
                 } 
             }
         }
