@@ -185,6 +185,23 @@ ModelImporter:
     4300028: pCube37
     4300030: pCube38
     4300032: polySurface4
+    6400000: church_bench:pCube24
+    6400002: pCube24
+    6400004: pCube25
+    6400006: pCube26
+    6400008: pCube27
+    6400010: pCube28
+    6400012: pCube29
+    6400014: pCube30
+    6400016: pCube31
+    6400018: pCube32
+    6400020: pCube33
+    6400022: pCube34
+    6400024: pCube35
+    6400026: pCube36
+    6400028: pCube37
+    6400030: pCube38
+    6400032: polySurface4
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -216,9 +233,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 100
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
