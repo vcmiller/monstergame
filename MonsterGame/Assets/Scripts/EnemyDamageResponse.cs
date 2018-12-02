@@ -12,6 +12,7 @@ public class EnemyDamageResponse : MonoBehaviour {
     public GameObject ragdoll;
     public float deathVelMultiplier = 0.2f;
     public GameObject corpse { get; private set; }
+    public int points = 5;
 
     private void Start() {
         cm = GetComponent<CharacterMotor>();
@@ -28,6 +29,8 @@ public class EnemyDamageResponse : MonoBehaviour {
         {
             rb.velocity = cm.velocity * deathVelMultiplier;
         }
+
+        ScoreCounter.inst.score += points;
 
         Destroy(gameObject);
     }
