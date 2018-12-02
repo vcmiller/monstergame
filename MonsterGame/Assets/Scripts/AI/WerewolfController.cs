@@ -10,6 +10,9 @@ public class WerewolfController : WerewolfSM<EnemyChannels> {
     public int attacks = 2;
     public float attackCooldown = 1;
     public float detectionRadius = 30;
+    public int maxChasing = 3;
+    public float chaseRadius;
+    public float fleeHealth = 25;
 
     public AudioClip attackSound;
     public AudioClip idleSound;
@@ -18,11 +21,19 @@ public class WerewolfController : WerewolfSM<EnemyChannels> {
     private AudioSource attackSource;
     private AudioSource idleSource;
     private GameObject[] wanderPoints;
+    private static HashSet<WerewolfSM> chasingPlayer = new HashSet<WerewolfSM>();
+    private Health health;
 
     public void Awake()
     {
         attackSource = GetComponent<AudioSource>();
         idleSource = GetComponent<AudioSource>();
+        health = GetComponent<Health>();
+    }
+
+    void OnDamage(Damage dmg)
+    {
+        state = StateID.Chase;
     }
 
     public override void Initialize()
@@ -35,13 +46,15 @@ public class WerewolfController : WerewolfSM<EnemyChannels> {
 
     protected override void State_Chase()
     {
-        MoveTo(player.position);
+        if (Vector3.Distance(transform.position, player.position) > chaseRadius)
+            MoveTo(player.position);
+        else
+            Stop();
         idleSource.PlayOneShot(idleSound);
         if (Vector3.Distance(transform.position, player.position) < attackRadius && attackTimer.Use())
         {
             attackSource.PlayOneShot(attackSound);
             channels.attack = Random.Range(1, attacks + 1);
-            print("attacking " + channels.attack);
         }
     }
 
@@ -55,6 +68,43 @@ public class WerewolfController : WerewolfSM<EnemyChannels> {
 
     protected override bool TransitionCond_Wander_Chase()
     {
-        return Vector3.Distance(transform.position, player.position) < detectionRadius;
+        chasingPlayer.RemoveWhere(sm => !sm);
+
+        return chasingPlayer.Count < maxChasing && Vector3.Distance(transform.position, player.position) < detectionRadius;
+    }
+
+    protected override void TransitionNotify_Wander_Chase()
+    {
+        chasingPlayer.Add(this);
+    }
+
+    protected override void State_RunAway()
+    {
+        if (arrived)
+        {
+            float bestDist = 0;
+            Vector3 bestPos = Vector3.zero;
+            foreach (var point in wanderPoints)
+            {
+                float d = Vector3.SqrMagnitude(point.transform.position - player.position);
+                if (d > bestDist)
+                {
+                    bestDist = d;
+                    bestPos = point.transform.position;
+                }
+            }
+            MoveTo(bestPos);
+        }
+    }
+
+    protected override bool TransitionCond_Chase_RunAway()
+    {
+        return health.health < fleeHealth;
+    }
+
+    protected override void TransitionNotify_Chase_RunAway()
+    {
+        Stop();
+        chasingPlayer.Remove(this);
     }
 }
