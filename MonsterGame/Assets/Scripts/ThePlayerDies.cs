@@ -12,10 +12,18 @@ public class ThePlayerDies : MonoBehaviour {
         FindObjectOfType<Canvas>().GetComponent<Animator>().Play("Death");
         Invoke("Reload", dieTime);
         GetComponent<vp_FPController>().enabled = false;
+
+
+        int score = ScoreCounter.inst.score;
+        int max = PlayerPrefs.GetInt("HighScore", 0);
+        if (score > max)
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+        }
     }
 
     void Reload()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("MainMenu");
     }
 }

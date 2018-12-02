@@ -13,6 +13,7 @@ public class WerewolfController : WerewolfSM<EnemyChannels> {
     public int maxChasing = 3;
     public float chaseRadius;
     public float fleeHealth = 25;
+    public float rotateSpeed = 400;
 
     public AudioClip attackSound;
     public AudioClip idleSound;
@@ -33,7 +34,7 @@ public class WerewolfController : WerewolfSM<EnemyChannels> {
 
     void OnDamage(Damage dmg)
     {
-        state = StateID.Chase;
+        //state = StateID.Chase;
     }
 
     public override void Initialize()
@@ -49,11 +50,13 @@ public class WerewolfController : WerewolfSM<EnemyChannels> {
         if (Vector3.Distance(transform.position, player.position) > chaseRadius)
             MoveTo(player.position);
         else
+        {
             Stop();
-        idleSource.PlayOneShot(idleSound);
+            Quaternion q = Quaternion.LookRotation(player.position - transform.position, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, q, Time.deltaTime * rotateSpeed);
+        }
         if (Vector3.Distance(transform.position, player.position) < attackRadius && attackTimer.Use())
         {
-            attackSource.PlayOneShot(attackSound);
             channels.attack = Random.Range(1, attacks + 1);
         }
     }

@@ -19,6 +19,7 @@ public class EnemyAnim : Motor<EnemyChannels> {
 
     public override void TakeInput()
     {
+        anim.SetFloat("Speed", cm.velocity.magnitude / cm.walkSpeed);
         if (channels.attack != 0)
         {
             anim.Play("Attack" + channels.attack);

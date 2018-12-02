@@ -3,7 +3,7 @@
 ///////////////////////////////////////////////////////////
 
 ComponentType vp_FPInput
-MouseLookSensitivity 5 5
+MouseLookSensitivity 3 3
 MouseLookSmoothSteps 10
 MouseLookSmoothWeight 0.5
 MouseLookAcceleration False
