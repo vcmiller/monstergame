@@ -3,7 +3,10 @@ guid: 09237cfa39540ff499e2eff73a644f17
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player: {instanceID: 0}
+  - attackSound: {fileID: 8300000, guid: 5d7edfe74350c054dbc082913105a73a, type: 3}
+  - idleSound: {fileID: 8300000, guid: a52919483288b9841849641d0b80e6d4, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

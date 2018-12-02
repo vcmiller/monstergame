@@ -9,8 +9,18 @@ public class WerewolfController : WerewolfSM<EnemyChannels> {
     public float attackRadius = 1;
     public int attacks = 2;
     public float attackCooldown = 1;
+    public AudioClip attackSound;
+    public AudioClip idleSound;
 
     private CooldownTimer attackTimer;
+    private AudioSource attackSource;
+    private AudioSource idleSource;
+
+    public void Awake()
+    {
+        attackSource = GetComponent<AudioSource>();
+        idleSource = GetComponent<AudioSource>();
+    }
 
     public override void Initialize()
     {
@@ -22,9 +32,10 @@ public class WerewolfController : WerewolfSM<EnemyChannels> {
     protected override void State_Chase()
     {
         MoveTo(player.position);
-
+        idleSource.PlayOneShot(idleSound);
         if (Vector3.Distance(transform.position, player.position) < attackRadius && attackTimer.Use())
         {
+            attackSource.PlayOneShot(attackSound);
             channels.attack = Random.Range(1, attacks + 1);
             print("attacking " + channels.attack);
         }
