@@ -5,7 +5,7 @@ using System.Collections.Generic;
 #pragma warning disable 649
 public abstract class WerewolfSM : SBR.CharacterNavigator {
     public enum StateID {
-        Chase, Wander
+        Chase, Wander, RunAway
     }
 
     new private class State : StateMachine.State {
@@ -17,12 +17,12 @@ public abstract class WerewolfSM : SBR.CharacterNavigator {
     }
 
     public WerewolfSM() {
-        allStates = new State[2];
+        allStates = new State[3];
 
         State stateChase = new State() {
             id = StateID.Chase,
             during = State_Chase,
-            transitions = new List<Transition>(0)
+            transitions = new List<Transition>(1)
         };
         allStates[0] = stateChase;
 
@@ -33,15 +33,34 @@ public abstract class WerewolfSM : SBR.CharacterNavigator {
         };
         allStates[1] = stateWander;
 
+        State stateRunAway = new State() {
+            id = StateID.RunAway,
+            during = State_RunAway,
+            transitions = new List<Transition>(0)
+        };
+        allStates[2] = stateRunAway;
+
         rootMachine.defaultState = stateWander;
         stateChase.parentMachine = rootMachine;
         stateWander.parentMachine = rootMachine;
+        stateRunAway.parentMachine = rootMachine;
+
+        Transition transitionChaseRunAway = new Transition() {
+            from = stateChase,
+            to = stateRunAway,
+            exitTime = 0f,
+            mode = StateMachineDefinition.TransitionMode.ConditionOnly,
+            notify = TransitionNotify_Chase_RunAway,
+            cond = TransitionCond_Chase_RunAway
+        };
+        stateChase.transitions.Add(transitionChaseRunAway);
 
         Transition transitionWanderChase = new Transition() {
             from = stateWander,
             to = stateChase,
             exitTime = 0f,
             mode = StateMachineDefinition.TransitionMode.ConditionOnly,
+            notify = TransitionNotify_Wander_Chase,
             cond = TransitionCond_Wander_Chase
         };
         stateWander.transitions.Add(transitionWanderChase);
@@ -62,8 +81,12 @@ public abstract class WerewolfSM : SBR.CharacterNavigator {
 
     protected abstract void State_Chase();
     protected abstract void State_Wander();
+    protected abstract void State_RunAway();
 
+    protected abstract bool TransitionCond_Chase_RunAway();
+    protected abstract void TransitionNotify_Chase_RunAway();
     protected abstract bool TransitionCond_Wander_Chase();
+    protected abstract void TransitionNotify_Wander_Chase();
 
 }
 

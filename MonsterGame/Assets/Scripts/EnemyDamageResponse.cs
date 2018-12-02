@@ -11,6 +11,7 @@ public class EnemyDamageResponse : MonoBehaviour {
     public Transform model;
     public GameObject ragdoll;
     public float deathVelMultiplier = 0.2f;
+    public GameObject corpse { get; private set; }
 
     private void Start() {
         cm = GetComponent<CharacterMotor>();
@@ -22,7 +23,7 @@ public class EnemyDamageResponse : MonoBehaviour {
 
     void OnZeroHealth()
     {
-        var corpse = Instantiate(ragdoll, model.position, model.rotation);
+        corpse = Instantiate(ragdoll, model.position, model.rotation);
         foreach (var rb in corpse.GetComponentsInChildren<Rigidbody>())
         {
             rb.velocity = cm.velocity * deathVelMultiplier;

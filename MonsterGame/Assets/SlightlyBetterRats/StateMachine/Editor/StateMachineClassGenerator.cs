@@ -57,6 +57,7 @@ public abstract class {0}<T> : {0} where T : Channels {{
     public new T channels {{ get; private set; }}
 
     public override void Initialize() {{
+        base.initialize();
         channels = base.channels as T;
     }}
 }}

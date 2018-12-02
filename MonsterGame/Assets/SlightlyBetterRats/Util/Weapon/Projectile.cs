@@ -34,6 +34,8 @@ namespace SBR {
         public Vector3 velocity { get; set; }
         public bool fired { get; protected set; }
 
+        public bool hitMarker;
+
         public virtual bool hitsTriggers {
             get {
                 return triggerInteraction == QueryTriggerInteraction.Collide || 
@@ -68,6 +70,11 @@ namespace SBR {
         }
 
         protected virtual void OnHitObject(Transform col, Vector3 position, Vector3 normal) {
+            var h = col.GetComponentInParent<Health>();
+            if (h && hitMarker)
+            {
+                HitMarker.inst.Set();
+            }
             col.Damage(damage, position, normal);
 
             velocity = Vector3.zero;

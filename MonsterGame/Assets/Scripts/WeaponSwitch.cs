@@ -25,7 +25,22 @@ public class WeaponSwitch : MonoBehaviour {
             curWeapon = (curWeapon - 1 + weapons.Length) % weapons.Length;
             UpdateActive();
         }
-	}
+        else if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            curWeapon = 0;
+            UpdateActive();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            curWeapon = 1;
+            UpdateActive();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            curWeapon = 2;
+            UpdateActive();
+        }
+    }
 
     void UpdateActive()
     {
