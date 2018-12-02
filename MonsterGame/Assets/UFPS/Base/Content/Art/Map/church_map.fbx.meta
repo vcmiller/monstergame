@@ -192,6 +192,10 @@ ModelImporter:
     100372: transform78
     100374: pCube85
     100376: polySurface34
+    100378: polySurface35
+    100380: polySurface36
+    100382: pCube86
+    100384: pCube87
     400000: church_bench:pCube24
     400002: //RootNode
     400004: pCube1
@@ -381,6 +385,10 @@ ModelImporter:
     400372: transform78
     400374: pCube85
     400376: polySurface34
+    400378: polySurface35
+    400380: polySurface36
+    400382: pCube86
+    400384: pCube87
     2100000: church_bench_lambert2
     2100002: lambert2
     2100004: lambert1
@@ -436,6 +444,10 @@ ModelImporter:
     2300098: pCube84
     2300100: pCube82
     2300102: polySurface34
+    2300104: polySurface35
+    2300106: polySurface36
+    2300108: pCube86
+    2300110: pCube87
     3300000: church_bench:pCube24
     3300002: pCube24
     3300004: pCube25
@@ -488,6 +500,10 @@ ModelImporter:
     3300098: pCube84
     3300100: pCube82
     3300102: polySurface34
+    3300104: polySurface35
+    3300106: polySurface36
+    3300108: pCube86
+    3300110: pCube87
     4300000: church_bench:pCube24
     4300002: pCube24
     4300004: pCube25
@@ -540,6 +556,10 @@ ModelImporter:
     4300098: pCube84
     4300100: pCube82
     4300102: polySurface34
+    4300104: polySurface35
+    4300106: polySurface36
+    4300108: pCube86
+    4300110: pCube87
     6400000: church_bench:pCube24
     6400002: pCube24
     6400004: pCube25
@@ -592,6 +612,10 @@ ModelImporter:
     6400098: pCube84
     6400100: pCube82
     6400102: polySurface34
+    6400104: polySurface35
+    6400106: polySurface36
+    6400108: pCube86
+    6400110: pCube87
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
