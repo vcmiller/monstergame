@@ -73,6 +73,18 @@ namespace SBR {
             velocity = Vector3.zero;
             transform.position = position;
 
+            if (!destroyOnHit || linger > 0) {
+                enabled = false;
+                transform.parent = col;
+                gravity = 0;
+            }
+
+            var tr = GetComponentInChildren<TrailRenderer>();
+            if (tr)
+            {
+                tr.transform.parent = null;
+            }
+
             if (destroyOnHit) {
                 Destroy(gameObject, linger);
             }
