@@ -392,6 +392,7 @@ ModelImporter:
     2100000: church_bench_lambert2
     2100002: lambert2
     2100004: lambert1
+    2100006: lambert3
     2300000: church_bench:pCube24
     2300002: pCube24
     2300004: pCube25
@@ -617,7 +618,27 @@ ModelImporter:
     6400108: pCube86
     6400110: pCube87
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: church_bench_lambert2
+    second: {fileID: 2100000, guid: e79c01da985f6ad48ac58e0d4af24df4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 7b23faab56fe1574c9d5017282642283, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: 1ffabec8cccb136498950cf443d1ac92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3
+    second: {fileID: 2100000, guid: d8a0e11095e0d3c41b2d2eb5a43834db, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
