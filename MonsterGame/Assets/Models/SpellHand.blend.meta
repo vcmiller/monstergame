@@ -108,6 +108,7 @@ ModelImporter:
     400100: thumb2
     400102: wrist
     2100000: Material
+    2100002: Wolf
     4300000: Werewolf
     4300002: SpellHand
     7400000: Default Take
