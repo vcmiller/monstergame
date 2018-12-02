@@ -49,6 +49,11 @@ namespace SBR {
         }
 
         public virtual void Update() {
+            if (healthbar)
+            {
+                healthbar.visible = health != maxHealth;
+            }
+
             if (healthRegenTimer.expired && !hasDied) {
                 Heal(healthRegenRate * Time.deltaTime);
             }

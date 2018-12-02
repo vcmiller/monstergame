@@ -9,12 +9,15 @@ public class WerewolfController : WerewolfSM<EnemyChannels> {
     public float attackRadius = 1;
     public int attacks = 2;
     public float attackCooldown = 1;
+    public float detectionRadius = 30;
+
     public AudioClip attackSound;
     public AudioClip idleSound;
 
     private CooldownTimer attackTimer;
     private AudioSource attackSource;
     private AudioSource idleSource;
+    private GameObject[] wanderPoints;
 
     public void Awake()
     {
@@ -27,6 +30,7 @@ public class WerewolfController : WerewolfSM<EnemyChannels> {
         base.Initialize();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         attackTimer = new CooldownTimer(attackCooldown);
+        wanderPoints = GameObject.FindGameObjectsWithTag("WanderNode");
     }
 
     protected override void State_Chase()
@@ -39,5 +43,18 @@ public class WerewolfController : WerewolfSM<EnemyChannels> {
             channels.attack = Random.Range(1, attacks + 1);
             print("attacking " + channels.attack);
         }
+    }
+
+    protected override void State_Wander()
+    {
+        if (arrived)
+        {
+            MoveTo(wanderPoints[Random.Range(0, wanderPoints.Length)].transform.position);
+        }
+    }
+
+    protected override bool TransitionCond_Wander_Chase()
+    {
+        return Vector3.Distance(transform.position, player.position) < detectionRadius;
     }
 }

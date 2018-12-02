@@ -5,7 +5,7 @@ using System.Collections.Generic;
 #pragma warning disable 649
 public abstract class WerewolfSM : SBR.CharacterNavigator {
     public enum StateID {
-        Chase
+        Chase, Wander
     }
 
     new private class State : StateMachine.State {
@@ -17,7 +17,7 @@ public abstract class WerewolfSM : SBR.CharacterNavigator {
     }
 
     public WerewolfSM() {
-        allStates = new State[1];
+        allStates = new State[2];
 
         State stateChase = new State() {
             id = StateID.Chase,
@@ -26,8 +26,25 @@ public abstract class WerewolfSM : SBR.CharacterNavigator {
         };
         allStates[0] = stateChase;
 
-        rootMachine.defaultState = stateChase;
+        State stateWander = new State() {
+            id = StateID.Wander,
+            during = State_Wander,
+            transitions = new List<Transition>(1)
+        };
+        allStates[1] = stateWander;
+
+        rootMachine.defaultState = stateWander;
         stateChase.parentMachine = rootMachine;
+        stateWander.parentMachine = rootMachine;
+
+        Transition transitionWanderChase = new Transition() {
+            from = stateWander,
+            to = stateChase,
+            exitTime = 0f,
+            mode = StateMachineDefinition.TransitionMode.ConditionOnly,
+            cond = TransitionCond_Wander_Chase
+        };
+        stateWander.transitions.Add(transitionWanderChase);
 
 
     }
@@ -44,7 +61,9 @@ public abstract class WerewolfSM : SBR.CharacterNavigator {
     }
 
     protected abstract void State_Chase();
+    protected abstract void State_Wander();
 
+    protected abstract bool TransitionCond_Wander_Chase();
 
 }
 
