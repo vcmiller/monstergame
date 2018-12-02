@@ -73,6 +73,125 @@ ModelImporter:
     100134: polySurface5
     100136: transform24
     100138: transform25
+    100140: group
+    100142: group1
+    100144: group2
+    100146: pasted__pCube53
+    100148: pasted__pCube54
+    100150: pasted__pCube58
+    100152: pasted__pCube58 1
+    100154: pasted__pCube59
+    100156: pasted__pCube60
+    100158: pCube42
+    100160: pCube43
+    100162: pCube44
+    100164: pCube45
+    100166: pCube46
+    100168: pCube47
+    100170: pCube48
+    100172: pCube49
+    100174: pCube50
+    100176: pCube51
+    100178: pCube52
+    100180: pCube53
+    100182: pCube54
+    100184: pCube55
+    100186: pCube56
+    100188: pCube57
+    100190: polySurface6
+    100192: polySurface7
+    100194: polySurface7 1
+    100196: polySurface8
+    100198: polySurface9
+    100200: transform26
+    100202: transform27
+    100204: transform28
+    100206: transform29
+    100208: transform30
+    100210: transform31
+    100212: transform32
+    100214: transform33
+    100216: transform34
+    100218: transform35
+    100220: transform36
+    100222: transform37
+    100224: transform38
+    100226: transform39
+    100228: transform40
+    100230: transform41
+    100232: transform42
+    100234: transform43
+    100236: transform44
+    100238: transform45
+    100240: transform46
+    100242: transform47
+    100244: transform48
+    100246: pCube58
+    100248: polySurface10
+    100250: transform49
+    100252: transform50
+    100254: pCube59
+    100256: pCube60
+    100258: pCube61
+    100260: pCube62
+    100262: pCube63
+    100264: pCube64
+    100266: pCube65
+    100268: polySurface20
+    100270: polySurface21
+    100272: polySurface32
+    100274: pCube66
+    100276: pCube67
+    100278: pCube68
+    100280: pCube69
+    100282: pCube70
+    100284: pCube71
+    100286: pCube72
+    100288: pCube73
+    100290: pCube74
+    100292: pCube75
+    100294: pCube76
+    100296: group3
+    100298: pCube77
+    100300: pCube78
+    100302: pCube79
+    100304: pCube80
+    100306: polySurface32 1
+    100308: polySurface33
+    100310: transform51
+    100312: transform52
+    100314: transform53
+    100316: transform54
+    100318: pCube81
+    100320: pCube82
+    100322: pCube83
+    100324: pCube84
+    100326: transform55
+    100328: transform56
+    100330: transform57
+    100332: transform58
+    100334: transform59
+    100336: transform60
+    100338: transform61
+    100340: transform62
+    100342: transform63
+    100344: transform64
+    100346: transform65
+    100348: transform66
+    100350: transform67
+    100352: transform68
+    100354: transform69
+    100356: transform70
+    100358: transform71
+    100360: transform72
+    100362: transform73
+    100364: transform74
+    100366: transform75
+    100368: transform76
+    100370: transform77
+    100372: transform78
+    100374: pCube85
+    100376: polySurface34
     400000: church_bench:pCube24
     400002: //RootNode
     400004: pCube1
@@ -143,6 +262,125 @@ ModelImporter:
     400134: polySurface5
     400136: transform24
     400138: transform25
+    400140: group
+    400142: group1
+    400144: group2
+    400146: pasted__pCube53
+    400148: pasted__pCube54
+    400150: pasted__pCube58
+    400152: pasted__pCube58 1
+    400154: pasted__pCube59
+    400156: pasted__pCube60
+    400158: pCube42
+    400160: pCube43
+    400162: pCube44
+    400164: pCube45
+    400166: pCube46
+    400168: pCube47
+    400170: pCube48
+    400172: pCube49
+    400174: pCube50
+    400176: pCube51
+    400178: pCube52
+    400180: pCube53
+    400182: pCube54
+    400184: pCube55
+    400186: pCube56
+    400188: pCube57
+    400190: polySurface6
+    400192: polySurface7
+    400194: polySurface7 1
+    400196: polySurface8
+    400198: polySurface9
+    400200: transform26
+    400202: transform27
+    400204: transform28
+    400206: transform29
+    400208: transform30
+    400210: transform31
+    400212: transform32
+    400214: transform33
+    400216: transform34
+    400218: transform35
+    400220: transform36
+    400222: transform37
+    400224: transform38
+    400226: transform39
+    400228: transform40
+    400230: transform41
+    400232: transform42
+    400234: transform43
+    400236: transform44
+    400238: transform45
+    400240: transform46
+    400242: transform47
+    400244: transform48
+    400246: pCube58
+    400248: polySurface10
+    400250: transform49
+    400252: transform50
+    400254: pCube59
+    400256: pCube60
+    400258: pCube61
+    400260: pCube62
+    400262: pCube63
+    400264: pCube64
+    400266: pCube65
+    400268: polySurface20
+    400270: polySurface21
+    400272: polySurface32
+    400274: pCube66
+    400276: pCube67
+    400278: pCube68
+    400280: pCube69
+    400282: pCube70
+    400284: pCube71
+    400286: pCube72
+    400288: pCube73
+    400290: pCube74
+    400292: pCube75
+    400294: pCube76
+    400296: group3
+    400298: pCube77
+    400300: pCube78
+    400302: pCube79
+    400304: pCube80
+    400306: polySurface32 1
+    400308: polySurface33
+    400310: transform51
+    400312: transform52
+    400314: transform53
+    400316: transform54
+    400318: pCube81
+    400320: pCube82
+    400322: pCube83
+    400324: pCube84
+    400326: transform55
+    400328: transform56
+    400330: transform57
+    400332: transform58
+    400334: transform59
+    400336: transform60
+    400338: transform61
+    400340: transform62
+    400342: transform63
+    400344: transform64
+    400346: transform65
+    400348: transform66
+    400350: transform67
+    400352: transform68
+    400354: transform69
+    400356: transform70
+    400358: transform71
+    400360: transform72
+    400362: transform73
+    400364: transform74
+    400366: transform75
+    400368: transform76
+    400370: transform77
+    400372: transform78
+    400374: pCube85
+    400376: polySurface34
     2100000: church_bench_lambert2
     2100002: lambert2
     2100004: lambert1
@@ -164,6 +402,40 @@ ModelImporter:
     2300030: pCube38
     2300032: polySurface4
     2300034: polySurface5
+    2300036: pasted__pCube58
+    2300038: pasted__pCube58 1
+    2300040: pasted__pCube59
+    2300042: pasted__pCube60
+    2300044: polySurface9
+    2300046: polySurface10
+    2300048: pCube58
+    2300050: pCube59
+    2300052: pCube60
+    2300054: pCube61
+    2300056: pCube62
+    2300058: pCube63
+    2300060: pCube64
+    2300062: pCube65
+    2300064: polySurface21
+    2300066: polySurface32
+    2300068: pCube66
+    2300070: pCube67
+    2300072: pCube68
+    2300074: pCube69
+    2300076: pCube70
+    2300078: pCube71
+    2300080: pCube72
+    2300082: pCube73
+    2300084: pCube74
+    2300086: pCube75
+    2300088: pCube76
+    2300090: pCube79
+    2300092: pCube80
+    2300094: polySurface33
+    2300096: pCube83
+    2300098: pCube84
+    2300100: pCube82
+    2300102: polySurface34
     3300000: church_bench:pCube24
     3300002: pCube24
     3300004: pCube25
@@ -182,6 +454,40 @@ ModelImporter:
     3300030: pCube38
     3300032: polySurface4
     3300034: polySurface5
+    3300036: pasted__pCube58
+    3300038: pasted__pCube58 1
+    3300040: pasted__pCube59
+    3300042: pasted__pCube60
+    3300044: polySurface9
+    3300046: polySurface10
+    3300048: pCube58
+    3300050: pCube59
+    3300052: pCube60
+    3300054: pCube61
+    3300056: pCube62
+    3300058: pCube63
+    3300060: pCube64
+    3300062: pCube65
+    3300064: polySurface21
+    3300066: polySurface32
+    3300068: pCube66
+    3300070: pCube67
+    3300072: pCube68
+    3300074: pCube69
+    3300076: pCube70
+    3300078: pCube71
+    3300080: pCube72
+    3300082: pCube73
+    3300084: pCube74
+    3300086: pCube75
+    3300088: pCube76
+    3300090: pCube79
+    3300092: pCube80
+    3300094: polySurface33
+    3300096: pCube83
+    3300098: pCube84
+    3300100: pCube82
+    3300102: polySurface34
     4300000: church_bench:pCube24
     4300002: pCube24
     4300004: pCube25
@@ -200,6 +506,40 @@ ModelImporter:
     4300030: pCube38
     4300032: polySurface4
     4300034: polySurface5
+    4300036: pasted__pCube58
+    4300038: pasted__pCube59
+    4300040: pasted__pCube60
+    4300042: pasted__pCube58
+    4300044: polySurface9
+    4300046: polySurface10
+    4300048: polySurface21
+    4300050: polySurface32
+    4300052: pCube58
+    4300054: pCube59
+    4300056: pCube60
+    4300058: pCube61
+    4300060: pCube62
+    4300062: pCube63
+    4300064: pCube64
+    4300066: pCube65
+    4300068: pCube66
+    4300070: pCube67
+    4300072: pCube68
+    4300074: pCube69
+    4300076: pCube70
+    4300078: pCube71
+    4300080: pCube72
+    4300082: pCube73
+    4300084: pCube74
+    4300086: pCube75
+    4300088: pCube76
+    4300090: polySurface33
+    4300092: pCube79
+    4300094: pCube80
+    4300096: pCube83
+    4300098: pCube84
+    4300100: pCube82
+    4300102: polySurface34
     6400000: church_bench:pCube24
     6400002: pCube24
     6400004: pCube25
@@ -218,6 +558,41 @@ ModelImporter:
     6400030: pCube38
     6400032: polySurface4
     6400034: polySurface5
+    6400036: pasted__pCube58
+    6400038: pasted__pCube58 1
+    6400040: pasted__pCube59
+    6400042: pasted__pCube60
+    6400044: polySurface9
+    6400046: polySurface10
+    6400048: pCube58
+    6400050: pCube59
+    6400052: pCube60
+    6400054: pCube61
+    6400056: pCube62
+    6400058: pCube63
+    6400060: pCube64
+    6400062: pCube65
+    6400064: polySurface21
+    6400066: polySurface32
+    6400068: pCube66
+    6400070: pCube67
+    6400072: pCube68
+    6400074: pCube69
+    6400076: pCube70
+    6400078: pCube71
+    6400080: pCube72
+    6400082: pCube73
+    6400084: pCube74
+    6400086: pCube75
+    6400088: pCube76
+    6400090: pCube79
+    6400092: pCube80
+    6400094: polySurface33
+    6400096: pCube83
+    6400098: pCube84
+    6400100: pCube82
+    6400102: polySurface34
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
